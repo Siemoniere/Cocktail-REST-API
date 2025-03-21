@@ -76,7 +76,11 @@ lub chociażby sortować koktajle alfabetycznie:
 ```
 http://localhost:3006/cocktails?sortBy=name
 ```
-albo za pomocą POST dodawać nowe rekordy, np. w http://localhost:3006/ingredients/ dodajemy:
+albo za pomocą POST dodawać nowe rekordy, np. w 
+```
+http://localhost:3006/ingredients/
+```
+dodajemy:
 ```
 {
    "name": "sugar",
