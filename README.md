@@ -20,7 +20,7 @@ W folderze głównym projektu uruchom poniższe polecenie, aby zainstalować wsz
 ```
 npm install
 ```
-To zainstaluje wszystkie pakiety wymineione w pliku package.json, takie jak Express, Mocha, Chai, Supertest oraz inne zależności wymagane do uruchomienia projektu.
+To zainstaluje wszystkie pakiety wymineione w pliku package.json.
 
 ### 3. Rozpakowanie bazy danych i konfiguracja pliku .env
 
