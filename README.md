@@ -85,3 +85,8 @@ albo za pomocą POST dodawać nowe rekordy, np. w http://localhost:3006/ingredie
    "url": "https://example.com/rum.jpg\n"
 }
 ```
+Aby usunąć rekord należy w DELETE sprecyzować po id jakiego konkretnie chcemy się pozbyć:
+```
+http://localhost:3006/ingredients/31
+```
+Właśnie usunęliśmy składnik o id 31.
