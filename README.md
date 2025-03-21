@@ -68,3 +68,11 @@ Do postawienia serwera użyłem Express.js, a obsługę wszystkich endpointów d
 
 ### Przykład uzycia
 
+Po uruchomieniu serwera można wyświetlać odpowiednie rekordy, np. filtrować koktajle zawierające limonkę:
+```
+http://localhost:3006/cocktails?ingredient=Lime
+```
+lub chociażby sortować koktajle alfabetycznie:
+```
+http://localhost:3006/cocktails?sortBy=name
+```
