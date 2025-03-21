@@ -1,9 +1,9 @@
 /*!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19  Distrib 10.11.8-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.6.18-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: cocktails
 -- ------------------------------------------------------
--- Server version	10.11.8-MariaDB-0ubuntu0.24.04.1
+-- Server version	10.6.18-MariaDB-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -41,6 +41,7 @@ CREATE TABLE `cocktail_ingredient` (
 
 LOCK TABLES `cocktail_ingredient` WRITE;
 /*!40000 ALTER TABLE `cocktail_ingredient` DISABLE KEYS */;
+INSERT INTO `cocktail_ingredient` VALUES (19,22,30.0,'ml'),(19,23,50.0,'ml'),(19,24,20.0,'ml'),(20,20,50.0,'ml'),(20,21,10.0,'piece'),(20,22,30.0,'ml'),(20,25,10.0,'ml'),(20,26,100.0,'ml'),(21,25,10.0,'ml'),(21,27,50.0,'ml'),(21,28,3.0,'ml'),(22,23,50.0,'ml'),(22,29,100.0,'ml'),(23,20,50.0,'ml'),(23,30,30.0,'ml'),(24,21,10.0,'piece'),(24,22,30.0,'ml'),(24,25,10.0,'ml'),(24,26,100.0,'ml');
 /*!40000 ALTER TABLE `cocktail_ingredient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +58,7 @@ CREATE TABLE `cocktails` (
   `category` varchar(30) NOT NULL,
   `recipe` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,9 +67,7 @@ CREATE TABLE `cocktails` (
 
 LOCK TABLES `cocktails` WRITE;
 /*!40000 ALTER TABLE `cocktails` DISABLE KEYS */;
-INSERT INTO `cocktails` VALUES
-(5,'Margarita','Cocktail with Alcohol','Mix tequila, lime, and triple sec with ice and serve in a salted rim glass'),
-(6,'Mojito','Cocktail with Alcohol','Mix rum, lime, mint leaves, sugar, and soda water');
+INSERT INTO `cocktails` VALUES (19,'Margarita','Cocktail with Alcohol','Mix tequila, lime, and triple sec with ice and serve in a salted rim glass'),(20,'Mojito','Cocktail with Alcohol','Mix rum, lime, mint leaves, sugar, and soda water'),(21,'Whiskey Sour','Cocktail with Alcohol','Mix whiskey, lemon juice, sugar, and angostura with ice and shake'),(22,'Tequila Sunrise','Cocktail with Alcohol','Mix tequila, orange juice, and grenadine syrup and serve'),(23,'Pina Colada','Cocktail with Alcohol','Blend rum, coconut cream, pineapple juice, and ice'),(24,'Virgin Mojito','Non-Alcoholic','Mix lime, mint leaves, sugar, and soda water (no alcohol)');
 /*!40000 ALTER TABLE `cocktails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -122,7 +121,7 @@ CREATE TABLE `ingredients` (
   `isAlcohol` tinyint(1) NOT NULL,
   `url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,11 +130,7 @@ CREATE TABLE `ingredients` (
 
 LOCK TABLES `ingredients` WRITE;
 /*!40000 ALTER TABLE `ingredients` DISABLE KEYS */;
-INSERT INTO `ingredients` VALUES
-(6,'Rum','Alkoholowy składnik koktajlu',1,'https://example.com/rum.jpg'),
-(7,'Mint','Świeża mięta, składnik koktajlu',0,'https://example.com/mint.jpg'),
-(8,'Lime','Świeży sok z limonki',0,'https://example.com/lime.jpg'),
-(9,'Tequila','Alkoholowy składnik koktajlu',1,'https://example.com/tequila.jpg');
+INSERT INTO `ingredients` VALUES (20,'Rum','Alkoholowy składnik koktajlu',1,'https://example.com/rum.jpg\n'),(21,'Mint','Świeża mięta, składnik koktajlu',0,'https://example.com/mint.jpg\n'),(22,'Lime','Świeży sok z limonki',0,'https://example.com/lime.jpg\n'),(23,'Tequila','Alkoholowy składnik koktajlu',1,'https://example.com/tequila.jpg\n'),(24,'Triple Sec','Likier pomarańczowy, składnik koktajlu',1,'https://example.com/triple-sec.jpg\n'),(25,'Sugar','Słodki składnik do koktajli',0,'https://example.com/sugar.jpg\n'),(26,'Soda Water','Woda gazowana, składnik koktajlu',0,'https://example.com/soda-water.jpg\n'),(27,'Whiskey','Alkoholowy składnik koktajlu',1,'https://example.com/whiskey.jpg\n'),(28,'Angostura','Bitters, składnik koktajlu',1,'https://example.com/angostura.jpg\n'),(29,'Orange Juice','Świeży sok pomarańczowy, składnik koktajlu',0,'https://example.com/orange-juice.jpg\n'),(30,'Coconut Cream','Krem kokosowy, składnik koktajlu',0,'https://example.com/coconut-cream.jpg\n');
 /*!40000 ALTER TABLE `ingredients` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -148,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-21  1:55:59
+-- Dump completed on 2025-03-21 19:08:29
