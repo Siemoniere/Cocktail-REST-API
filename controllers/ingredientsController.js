@@ -5,7 +5,7 @@ exports.getAllIngredients = async (req, res) => {
         const [rows] = await pool.query('SELECT * FROM ingredients');
         res.json(rows);
     } catch (error) {
-        console.error("🔥 Błąd w bazie danych:", error);
+        console.error("Błąd w bazie danych:", error);
         res.status(500).json({ message: 'Błąd serwera', error: error.message });
     }
 };
@@ -19,7 +19,7 @@ exports.createIngredient = async (req, res) => {
         );
         res.json({ id: result.insertId, message: 'Dodano składnik' });
     } catch (error) {
-        console.error("🔥 Błąd przy dodawaniu składnika:", error);
+        console.error(" Błąd przy dodawaniu składnika:", error);
         res.status(500).json({ message: 'Błąd serwera', error: error.message });
     }
 };
@@ -30,7 +30,7 @@ exports.getIngredientById = async (req, res) => {
         if (rows.length === 0) return res.status(404).json({ message: 'Nie znaleziono składnika' });
         res.json(rows[0]);
     } catch (error) {
-        console.error("🔥 Błąd w bazie danych:", error);
+        console.error(" Błąd w bazie danych:", error);
         res.status(500).json({ message: 'Błąd serwera', error: error.message });
     }
 };
@@ -45,7 +45,7 @@ exports.updateIngredient = async (req, res) => {
         if (result.affectedRows === 0) return res.status(404).json({ message: 'Nie znaleziono składnika' });
         res.json({ message: 'Zaktualizowano składnik' });
     } catch (error) {
-        console.error("🔥 Błąd przy aktualizacji składnika:", error);
+        console.error("Błąd przy aktualizacji składnika:", error);
         res.status(500).json({ message: 'Błąd serwera', error: error.message });
     }
 };
@@ -56,7 +56,7 @@ exports.deleteIngredient = async (req, res) => {
         if (result.affectedRows === 0) return res.status(404).json({ message: 'Nie znaleziono składnika' });
         res.json({ message: 'Usunięto składnik' });
     } catch (error) {
-        console.error("🔥 Błąd przy usuwaniu składnika:", error);
+        console.error("Błąd przy usuwaniu składnika:", error);
         res.status(500).json({ message: 'Błąd serwera', error: error.message });
     }
 };
