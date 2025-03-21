@@ -66,7 +66,7 @@ Ponadto w bazie stworzyłem triggery automatycznie usuwające wszystkie rekordy 
 
 Do postawienia serwera użyłem Express.js, a obsługę wszystkich endpointów dla składników i koktajli zawarłem w katalogu routes. W katalogu controllers znajduje sie cała logika ogarniania zapytań. Znajdują tam się wszystkie warunki zapewniające szczelność bazy (np. nie można dodac koktajlu, gdy jakikolwiek jego składnik nie znajduje się w tabeli ingredients).
 
-### Przykład uzycia
+### Przykład użycia
 
 Po uruchomieniu serwera można wyświetlać odpowiednie rekordy, np. filtrować koktajle zawierające limonkę:
 ```
