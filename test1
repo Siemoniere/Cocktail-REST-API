@@ -1,0 +1,52 @@
+http://localhost:3006/api/login
+{
+    "email": "user@example.com",
+    "password": "user"
+}
+{
+    "email": "admin@example.com",
+    "password": "admin"
+}
+
+http://localhost:3006/cocktails/25
+{
+    "name": "Mojito",
+    "category": "Cocktail with Alcohol",
+    "recipe": "Mix rum, lime, mint leaves, sugar, and soda water",
+    "ingredients": [
+        {
+            "id": 20,
+            "name": "Rum",
+            "quantity": "50.0",
+            "unit": "ml"
+        },
+        {
+            "id": 21,
+            "name": "Mint",
+            "quantity": "10.0",
+            "unit": "piece"
+        },
+        {
+            "id": 22,
+            "name": "Lime",
+            "quantity": "30.0",
+            "unit": "ml"
+        },
+        {
+            "id": 25,
+            "name": "Sugar",
+            "quantity": "10.0",
+            "unit": "ml"
+        },
+        {
+            "id": 26,
+            "name": "Soda Water",
+            "quantity": "100.0",
+            "unit": "ml"
+        }
+    ]
+}
+GET
+http://localhost:3006/ingredients?page=2&limit=3
+http://localhost:3006/cocktails?sortBy=name&limit=100
+http://localhost:3006/ingredients?isAlcohol=true
