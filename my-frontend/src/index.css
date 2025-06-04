@@ -4,13 +4,28 @@ pre, footer {
 }
 
 html, body {
-  min-height: 100vh;
+  min-height: 10vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
+div.centered {
+  min-height: 100vh;         /* pełna wysokość ekranu */
+  display: flex;
+  flex-direction: column;    /* elementy jeden pod drugim */
+  justify-content: center;   /* wyśrodkuj w pionie */
+  align-items: center;       /* wyśrodkuj w poziomie */
+  text-align: center;
+  padding: 1rem;
+}
 
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+}
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -115,7 +130,6 @@ img {
 
 li {
   text-align: left;
-  padding: 1px;
   color: white;
 }
 

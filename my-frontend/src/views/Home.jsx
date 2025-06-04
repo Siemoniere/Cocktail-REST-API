@@ -1,19 +1,24 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Home({ email, onLogout }) {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    onLogout();
-    navigate("/login");
-  };
-
+function Home() {
   return (
-    <div>
-      <h2>Witaj, {email}</h2>
-      <button onClick={handleLogout}>Wyloguj</button>
-    </div>
+    <>
+        <header>
+        <nav>
+            <ul>
+                <li><Link to="/home">Home</Link></li>
+                <li><Link to="/info">Info</Link></li>
+                <li><Link to="/login">Zaloguj</Link></li>
+            </ul>
+        </nav>
+      </header>
+
+        <div className="centered">
+            <h1>Witaj w panelu głównym</h1>
+            <p>Tutaj możesz przeglądać koktajle i składniki.</p>
+        </div>
+    </>
+    
   );
 }
 
